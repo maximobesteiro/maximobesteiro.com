@@ -12,13 +12,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noFallthroughCasesInSwitch": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@content": ["./.velite"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
