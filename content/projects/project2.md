@@ -3,7 +3,7 @@ title: 'Project Two'
 description: 'project 2 desc'
 date: '2024-02-02'
 slug: 'p-2'
-skills: 
+skills:
   - 'Javascript'
   - 'MongoDB'
 ---

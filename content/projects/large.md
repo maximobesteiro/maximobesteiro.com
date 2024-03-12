@@ -173,7 +173,7 @@ Code can be presented inline, like `<?php bloginfo('stylesheet_url'); ?>`, or wi
 ```
 
 ```js {6,20} showLineNumbers /velite/
-import { defineConfig, s } from 'velite'
+import { defineConfig, s } from 'velite';
 
 // `s` is extended from Zod with some custom schemas,
 // you can also import re-exported `z` from `velite` if you don't need these extension schemas.
@@ -192,16 +192,16 @@ export default defineConfig({
           video: s.file().optional(), // input file relpath, output file public path.
           metadata: s.metadata(), // extract markdown reading-time, word-count, etc.
           excerpt: s.excerpt(), // excerpt of markdown content
-          content: s.markdown() // transform markdown to html
+          content: s.markdown(), // transform markdown to html
         })
         // more additional fields (computed fields)
-        .transform(data => ({ ...data, permalink: `/blog/${data.slug}` }))
+        .transform((data) => ({ ...data, permalink: `/blog/${data.slug}` })),
     },
     others: {
       // other collection schema options
-    }
-  }
-})
+    },
+  },
+});
 ```
 
 ---

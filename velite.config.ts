@@ -1,15 +1,15 @@
-import rehypePrettyCode from 'rehype-pretty-code'
-import { defineCollection, defineConfig, s } from 'velite'
+import rehypePrettyCode from 'rehype-pretty-code';
+import { defineCollection, defineConfig, s } from 'velite';
 
-const linkType = s.enum(['GitHub', 'Website'])
+const linkType = s.enum(['GitHub', 'Website']);
 
 const meta = s
   .object({
     title: s.string().optional(),
     description: s.string().optional(),
-    keywords: s.array(s.string()).optional()
+    keywords: s.array(s.string()).optional(),
   })
-  .optional()
+  .optional();
 
 const projects = defineCollection({
   name: 'Projects',
@@ -27,8 +27,8 @@ const projects = defineCollection({
       skills: s.array(s.string()).optional(),
       links: s.array(s.object({ type: linkType, url: s.string() })).optional(),
     })
-    .transform(data => ({ ...data, permalink: `/projects/${data.slug}` }))
-})
+    .transform((data) => ({ ...data, permalink: `/projects/${data.slug}` })),
+});
 
 export default defineConfig({
   root: 'content',
@@ -37,8 +37,8 @@ export default defineConfig({
     assets: 'public/static',
     base: '/static/',
     name: '[name]-[hash:6].[ext]',
-    clean: true
+    clean: true,
   },
   collections: { projects },
-  markdown: { rehypePlugins: [rehypePrettyCode] }
-})
+  markdown: { rehypePlugins: [rehypePrettyCode] },
+});

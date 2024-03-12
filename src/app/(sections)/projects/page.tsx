@@ -1,21 +1,24 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { projects } from '@content'
-import SectionHeader from '@/components/sectionHeader'
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { projects } from '@content';
+import SectionHeader from '@/components/sectionHeader';
 
 export const metadata: Metadata = {
   title: 'Projects',
-}
+};
 
 export default function Page() {
   return (
     <>
-      <SectionHeader 
+      <SectionHeader
         title="Projects"
         subtitle="Most of the projects are from work and some are on my own time."
       />
-      {projects.map( project => (
-        <article key={project.slug} className={project.featured ? 'bg-slate-300' : ''}>
+      {projects.map((project) => (
+        <article
+          key={project.slug}
+          className={project.featured ? 'bg-slate-300' : ''}
+        >
           <Link href={project.permalink}>
             <h2> ---------- {project.title}</h2>
           </Link>
@@ -23,5 +26,5 @@ export default function Page() {
         </article>
       ))}
     </>
-  )
+  );
 }
