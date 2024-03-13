@@ -1,11 +1,13 @@
 ---
-title: 'Project Two'
-description: 'project 2 desc'
-date: '2024-02-02'
-slug: 'p-2'
+title: Project Two
+description: project 2 desc
+published: true
+dateFrom: 2024-02-02
+dateTo: 2024-02-18
+slug: p-2
 skills:
-  - 'Javascript'
-  - 'MongoDB'
+  - Javascript
+  - MongoDB
 ---
 
 # project 2

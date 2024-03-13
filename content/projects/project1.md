@@ -1,7 +1,8 @@
 ---
 title: Project One
 description: project 1 desc
-date: 2024-01-03
+published: true
+dateFrom: 2024-01-03
 slug: p-1
 skills:
   - Javascript

@@ -1,8 +1,9 @@
 ---
 title: Style Guide
 description: A large MD file with all possible styles
+published: true
 slug: style-guide
-date: 1970-01-01 00:00:00
+dateFrom: 1970-01-01 00:00:00
 ---
 
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.

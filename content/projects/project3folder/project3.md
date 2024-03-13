@@ -1,11 +1,13 @@
 ---
-title: 'Project Three'
-description: 'project 1 desc'
-date: '2024-01-01'
-slug: 'p-3'
+title: Project Three
+description: project 1 desc
+published: true
+dateFrom: 2024-01-01
+dateTo: present
+slug: p-3
 skills:
-  - 'Java'
-  - 'MariaDB'
+  - Java
+  - MariaDB
 meta:
   title: Meta title for P3
   description: meta desc for P3

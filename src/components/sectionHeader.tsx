@@ -4,7 +4,7 @@ const SectionHeader: React.FC<{ title: string; subtitle?: string }> = ({
 }) => {
   return (
     <header className="max-w-2xl mx-auto lg:mx-0">
-      <h2 className="text-3xl font-bold text-zinc-200">{title}</h2>
+      <h2 className="text-4xl font-bold text-zinc-200">{title}</h2>
       <p className="mt-4 text-zinc-400">{subtitle}</p>
     </header>
   );

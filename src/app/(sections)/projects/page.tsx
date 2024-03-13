@@ -2,12 +2,21 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { projects } from '@content';
 import SectionHeader from '@/components/sectionHeader';
+import ProjectCard from '@/components/projectCard';
 
 export const metadata: Metadata = {
   title: 'Projects',
 };
 
 export default function Page() {
+  const sorted = projects
+    .filter((project) => project.published)
+    .sort(
+      (a, b) =>
+        new Date(b.dateFrom ?? Number.POSITIVE_INFINITY).getTime() -
+        new Date(a.dateFrom ?? Number.POSITIVE_INFINITY).getTime(),
+    );
+
   return (
     <>
       <SectionHeader
@@ -15,17 +24,11 @@ export default function Page() {
         subtitle="Most of the projects are from work and some are on my own time."
       />
       <div className="w-full h-px bg-zinc-800"></div>
-      {projects.map((project) => (
-        <article
-          key={project.slug}
-          className={project.featured ? 'bg-slate-300' : ''}
-        >
-          <Link href={project.permalink}>
-            <h2> ---------- {project.title}</h2>
-          </Link>
-          <p>{project.skills?.join(', ')}</p>
-        </article>
-      ))}
+      <div className="flex flex-col gap-8">
+        {sorted.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
+      </div>
     </>
   );
 }

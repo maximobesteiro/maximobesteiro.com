@@ -14,20 +14,20 @@ const meta = s
 const projects = defineCollection({
   name: 'Projects',
   pattern: 'projects/**/*.md',
-  schema: s
-    .object({
-      title: s.string().max(99),
-      slug: s.slug(),
-      date: s.isodate(),
-      description: s.string().max(999),
-      featured: s.boolean().default(false),
-      tags: s.array(s.string()).default([]),
-      meta: meta,
-      content: s.markdown(),
-      skills: s.array(s.string()).optional(),
-      links: s.array(s.object({ type: linkType, url: s.string() })).optional(),
-    })
-    .transform((data) => ({ ...data, permalink: `/projects/${data.slug}` })),
+  schema: s.object({
+    title: s.string().max(99),
+    slug: s.slug(),
+    description: s.string().max(999),
+    published: s.boolean(),
+    featured: s.boolean().default(false),
+    tags: s.array(s.string()).default([]),
+    meta: meta,
+    content: s.markdown(),
+    skills: s.array(s.string()).optional(),
+    links: s.array(s.object({ type: linkType, url: s.string() })).optional(),
+    dateFrom: s.isodate(),
+    dateTo: s.isodate().or(s.literal('present')).optional(),
+  }),
 });
 
 export default defineConfig({
