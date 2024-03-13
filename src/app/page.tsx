@@ -51,14 +51,14 @@ export default function Home() {
 
   return (
     <main className="px-10 flex flex-col w-screen h-screen items-center text-center justify-center">
-      <nav className="flex gap-12 animate-fade-in text-lg text-zinc-400 md:gap-20 md:text-2xl xl:text-3xl xl:gap-24">
-        <Link className="duration-200 hover:text-zinc-100" href={'/about'}>
+      <nav className="flex gap-12 animate-fade-in text-base text-zinc-500 md:gap-20 xl:text-lg xl:gap-24">
+        <Link className="duration-200 hover:text-zinc-300" href={'/about'}>
           About
         </Link>
-        <Link className="duration-200 hover:text-zinc-100" href={'/projects'}>
+        <Link className="duration-200 hover:text-zinc-300" href={'/projects'}>
           Projects
         </Link>
-        <Link className="duration-200 hover:text-zinc-100" href={'/contact'}>
+        <Link className="duration-200 hover:text-zinc-300" href={'/contact'}>
           Contact
         </Link>
       </nav>
@@ -69,7 +69,7 @@ export default function Home() {
       >
         Máximo Besteiro
       </h1>
-      <p className="text-base text-zinc-400 animate-fade-in md:text-xl xl:text-2xl">
+      <p className="text-base text-zinc-500 animate-fade-in xl:text-lg">
         Tech-savvy team player, always honing my skills to build better
         solutions.
       </p>

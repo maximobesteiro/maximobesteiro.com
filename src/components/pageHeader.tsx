@@ -25,7 +25,7 @@ const PageHeader: React.FC = () => {
           </Link>
           {!pathname.startsWith('/projects/') && (
             <nav>
-              <ul className="flex gap-8 text-xl">
+              <ul className="flex gap-8">
                 <li>
                   <Link
                     href={'/about'}
