@@ -14,6 +14,7 @@ export default function Page() {
         title="Projects"
         subtitle="Most of the projects are from work and some are on my own time."
       />
+      <div className="w-full h-px bg-zinc-800"></div>
       {projects.map((project) => (
         <article
           key={project.slug}
