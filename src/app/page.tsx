@@ -28,15 +28,17 @@ export default function Home() {
     const defaultStyles = [
       'font-display',
       'font-bold',
-      'text-5xl',
+      'text-4xl',
+      'sm:text-5xl',
       'md:text-7xl',
       'xl:text-8xl',
     ];
     const glitchStyles = [
       'font-display-glitch',
       'font-normal',
-      'text-[41px]/[48px]',
-      'md:text-[56px]/[72px]',
+      'text-[31px]/[40px]',
+      'sm:text-[41px]/[48px]',
+      'md:text-[62px]/[72px]',
       'xl:text-[83px]/[96px]',
     ];
 
@@ -51,7 +53,7 @@ export default function Home() {
 
   return (
     <main className="px-10 flex flex-col w-screen h-screen items-center text-center justify-center">
-      <nav className="flex gap-12 animate-fade-in text-base text-zinc-500 md:gap-20 xl:text-lg xl:gap-24">
+      <nav className="flex gap-12 animate-fade-in text-base text-zinc-500 md:gap-20 xl:gap-24">
         <Link className="duration-200 hover:text-zinc-300" href={'/about'}>
           About
         </Link>
@@ -64,12 +66,12 @@ export default function Home() {
       </nav>
       <h1
         id="brand"
-        className="my-14 text-5xl font-bold font-display md:text-7xl xl:text-8xl xl:my-24"
+        className="my-14 font-bold font-display text-4xl sm:text-5xl md:text-7xl xl:text-8xl xl:my-24"
         onMouseEnter={pulseBrand}
       >
         Máximo Besteiro
       </h1>
-      <p className="text-base text-zinc-500 animate-fade-in xl:text-lg">
+      <p className="text-base text-zinc-500 animate-fade-in">
         Tech-savvy team player, always honing my skills to build better
         solutions.
       </p>
