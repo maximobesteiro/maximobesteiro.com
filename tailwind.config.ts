@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
-import { ThemeConfig } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -33,6 +32,7 @@ const config: Config = {
           },
         },
       },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       typography: ({ theme }: { theme: any }) => ({
         zinc: {
           css: {
@@ -52,4 +52,5 @@ const config: Config = {
     require('tailwindcss-debug-screens'),
   ],
 };
+
 export default config;
