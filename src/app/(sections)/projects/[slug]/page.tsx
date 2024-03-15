@@ -37,7 +37,7 @@ export default function ProjectPage({ params }: ProjectProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>{link.type}</span>
+                <span className="text-lg">{link.type}</span>
                 <ExternalLink className="w-6 h-6" />
               </Link>
             ))}
@@ -45,6 +45,17 @@ export default function ProjectPage({ params }: ProjectProps) {
         )}
       </header>
       <hr className="my-4 border-zinc-600" />
+      {project.skills && (
+        <>
+          <div>
+            <h3 className="text-2xl font-bold">Skills Involved</h3>
+            <div className="mt-6 text-zinc-400 text-lg">
+              {project.skills?.join(' • ')}
+            </div>
+          </div>
+          <hr className="my-4 border-zinc-600" />
+        </>
+      )}
       <div
         className="prose prose-invert prose-zinc prose-hr:border-zinc-800 text-zinc-400 max-w-none"
         dangerouslySetInnerHTML={{ __html: project.content }}
