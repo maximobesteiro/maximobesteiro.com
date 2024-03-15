@@ -15,7 +15,7 @@ const rubik_glitch = Rubik_Glitch({
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export const metadata: Metadata = {
-  title: 'Maximo Besteiro | Software Engineer',
+  title: 'Maximo Besteiro | Home',
   description: "Maximo Besteiro's portfolio page",
 };
 

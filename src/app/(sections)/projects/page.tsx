@@ -5,7 +5,7 @@ import SectionHeader from '@/components/sectionHeader';
 import ProjectCard from '@/components/projectCard';
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: 'Maximo Besteiro | Projects',
 };
 
 export default function Page() {

@@ -4,7 +4,7 @@ import SectionHeader from '@/components/sectionHeader';
 import ContactCard from '@/components/contactCard';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Maximo Besteiro | Contact',
 };
 
 export default function Page() {
