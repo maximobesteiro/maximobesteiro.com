@@ -13,7 +13,11 @@ function getProjectBySlug(slug: string) {
 
 export default function ProjectPage({ params }: ProjectProps) {
   const project = getProjectBySlug(params.slug);
-  if (project == null) notFound();
+
+  if (project == null) {
+    notFound();
+  }
+
   return (
     <article className="prose dark:prose-invert py-6">
       <header>
@@ -35,7 +39,11 @@ export default function ProjectPage({ params }: ProjectProps) {
 
 export function generateMetadata({ params }: ProjectProps) {
   const project = getProjectBySlug(params.slug);
-  if (project == null) return {};
+
+  if (project == null) {
+    return {};
+  }
+
   return {
     title: `Maximo Besteiro | ${project.meta?.title || project.title}`,
     description: project.meta?.description || project.description,

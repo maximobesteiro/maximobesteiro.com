@@ -20,6 +20,7 @@ export default function Home() {
 
   const pulseBrand = () => {
     const brand = document.getElementById('brand');
+
     if (!brand) {
       return;
     }
