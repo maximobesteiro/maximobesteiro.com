@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation';
+import { ExternalLink } from 'lucide-react';
 import { projects } from '@content';
+import Link from 'next/link';
 
 interface ProjectProps {
   params: {
@@ -19,18 +21,32 @@ export default function ProjectPage({ params }: ProjectProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert py-6">
-      <header>
-        <h1 className="mb-2">{project.title}</h1>
+    <article className="space-y-10 md:space-y-14">
+      <header className="text-center">
+        <h2 className="text-4xl font-bold text-zinc-100">{project.title}</h2>
         {project.description && (
-          <p className="mt-0 text-xl text-slate-700 dark:text-slate-200">
-            {project.description}
-          </p>
+          <p className="mt-6 text-lg text-zinc-400">{project.description}</p>
+        )}
+        {project.links && (
+          <div className="flex gap-8 mt-14 justify-center">
+            {project.links.map((link) => (
+              <Link
+                key={link.type}
+                href={link.url}
+                className="flex gap-3 w-fit border border-zinc-600 p-3 rounded-xl text-zinc-400 hover:border-zinc-100 hover:text-zinc-100 duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{link.type}</span>
+                <ExternalLink className="w-6 h-6" />
+              </Link>
+            ))}
+          </div>
         )}
       </header>
-      <hr className="my-4" />
+      <hr className="my-4 border-zinc-600" />
       <div
-        className="prose"
+        className="prose prose-invert prose-zinc prose-hr:border-zinc-800 text-zinc-400 max-w-none"
         dangerouslySetInnerHTML={{ __html: project.content }}
       ></div>
     </article>

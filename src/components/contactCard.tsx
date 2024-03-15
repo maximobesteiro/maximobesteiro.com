@@ -20,6 +20,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
     <Link
       href={link}
       target={openInNewTab ? '_blank' : '_self'}
+      rel="noopener noreferrer"
       className="w-full flex flex-col items-center gap-4 md:flex-row md:justify-between border border-zinc-600 hover:border-zinc-100 rounded-2xl p-8 group duration-200"
     >
       <div className="flex gap-5 items-center text-sm text-zinc-400 group-hover:text-zinc-100">

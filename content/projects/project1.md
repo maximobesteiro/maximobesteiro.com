@@ -10,9 +10,9 @@ skills:
   - Leadership
 links:
   - type: Website
-    url: www.google.com
+    url: https://www.google.com
   - type: GitHub
-    url: www.github.com
+    url: https://www.github.com
 meta:
   title: Meta title
   description: meta desc
