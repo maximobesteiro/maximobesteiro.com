@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import { ThemeConfig } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -32,6 +33,18 @@ const config: Config = {
           },
         },
       },
+      typography: ({ theme }: { theme: any }) => ({
+        zinc: {
+          css: {
+            '--tw-prose-invert-headings': theme('colors.zinc[300]'),
+            '--tw-prose-invert-links': theme('colors.zinc[300]'),
+            '--tw-prose-invert-bold': theme('colors.zinc[300]'),
+            '--tw-prose-invert-kbd': theme('colors.zinc[300]'),
+            '--tw-prose-invert-code': theme('colors.zinc[300]'),
+            '--tw-prose-invert-quotes': theme('colors.zinc[300]'),
+          },
+        },
+      }),
     },
   },
   plugins: [
