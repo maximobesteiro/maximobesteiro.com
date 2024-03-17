@@ -15,29 +15,33 @@ export default function Page() {
       <div className="flex flex-col-reverse items-center md:flex md:flex-row md:items-start gap-8 border border-zinc-600 p-8 rounded-2xl">
         <div className="space-y-3 text-zinc-400 text-lg">
           <p>
-            I´m a Full Stack engineer, leader and mentor. I have a strong
-            background in web development, with extensive experience in both
-            front-end and back-end technologies. I have a passion for clean
-            code, scalable architecture, and building high-quality software.
+            I have a strong background in web development, with extensive
+            experience in both front-end and back-end technologies. I have a
+            passion for clean code, scalable architecture, and building
+            high-quality software.
           </p>
           <p>
-            I believe that technology can create a better world, and I´m driven
-            by the potential to build products that have a real impact on
-            people´s lives. Whether I´m leading a project or guiding a junior
-            developer, I strive to create a collaborative and supportive
-            environment where everyone can thrive.
+            I’m driven by the potential to build products that have a real
+            impact on people’s lives. Whether I’m leading a project or guiding a
+            junior developer, I strive to create a collaborative and supportive
+            environments where everyone can thrive.
           </p>
           <p>
-            Outside of work, you can find me experimenting with the latest
-            JavaScript frameworks, exploring the world, or trying out new song
-            on my guitar.
+            Outside of work, I enjoy chess, hiking in new landscapes, and
+            playing guitar.
           </p>
         </div>
-        <Image
-          src={profilePicture}
-          alt="me"
-          className="rounded-2xl opacity-85 w-1/3 h-fit max-h-96"
-        />
+        {/* Container to enforce square shape */}
+        <div className="relative aspect-square w-1/2 h-80">
+          <Image
+            src={profilePicture}
+            alt="me"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="50% 80%"
+            className="rounded-2xl opacity-85"
+          />
+        </div>
       </div>
       <a
         href="/Maximo_Besteiro_CV_en.pdf"

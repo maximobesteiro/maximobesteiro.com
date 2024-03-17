@@ -73,8 +73,7 @@ export default function Home() {
         Máximo Besteiro
       </h1>
       <p className="text-base text-zinc-500 animate-fade-in">
-        Tech-savvy team player, always honing my skills to build better
-        solutions.
+        Team-driven engineer, always sharpening my skills for stronger results.
       </p>
     </main>
   );
