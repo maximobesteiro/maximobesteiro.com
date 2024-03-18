@@ -1,7 +1,7 @@
 ---
 title: Style Guide
 description: A large MD file with all possible styles
-published: true
+published: false
 slug: style-guide
 dateFrom: 1970-01-01 00:00:00
 ---

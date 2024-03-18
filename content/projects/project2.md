@@ -1,7 +1,7 @@
 ---
 title: Project Two
 description: project 2 desc
-published: true
+published: false
 dateFrom: 2024-02-02
 dateTo: 2024-02-18
 slug: p-2

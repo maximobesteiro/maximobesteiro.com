@@ -1,7 +1,7 @@
 ---
 title: Project One
 description: project 1 desc
-published: true
+published: false
 dateFrom: 2024-01-03
 slug: p-1
 skills:

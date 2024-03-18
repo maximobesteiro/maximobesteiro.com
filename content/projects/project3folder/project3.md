@@ -1,7 +1,7 @@
 ---
 title: Project Three
 description: project 1 desc
-published: true
+published: false
 dateFrom: 2024-01-01
 dateTo: present
 slug: p-3
