@@ -6,8 +6,8 @@ const ProjectCard: React.FC<{ project: Projects }> = ({
 }) => {
   return (
     <Link href={`/projects/${slug}`}>
-      <article className="w-full flex flex-col gap-4 border border-zinc-600 hover:border-zinc-100 rounded-2xl p-8 group duration-200">
-        <div className="flex gap-2 text-sm text-zinc-400 font-semibold group-hover:text-zinc-200 duration-200">
+      <article className="group flex w-full flex-col gap-4 rounded-2xl border border-zinc-600 p-8 duration-200 hover:border-zinc-100">
+        <div className="flex gap-2 text-sm font-semibold text-zinc-400 duration-200 group-hover:text-zinc-200">
           <time dateTime={dateFrom}>
             {Intl.DateTimeFormat('en-US', {
               month: 'short',
@@ -27,10 +27,10 @@ const ProjectCard: React.FC<{ project: Projects }> = ({
             </>
           )}
         </div>
-        <h2 className="text-xl font-bold duration-200 lg:text-3xl text-zinc-400 group-hover:text-white">
+        <h2 className="text-xl font-bold text-zinc-400 duration-200 group-hover:text-white lg:text-3xl">
           {title}
         </h2>
-        <p className="text-sm duration-200 text-zinc-400 group-hover:text-zinc-200">
+        <p className="text-sm text-zinc-400 duration-200 group-hover:text-zinc-200">
           {description}
         </p>
       </article>

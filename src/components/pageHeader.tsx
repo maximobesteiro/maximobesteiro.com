@@ -12,16 +12,16 @@ const PageHeader: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
+        className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur duration-200 ${
           isIntersecting ? 'border-transparent' : 'border-zinc-800'
         }`}
       >
-        <div className="container flex items-center justify-between p-6 mx-auto">
+        <div className="container mx-auto flex items-center justify-between p-6">
           <Link
             href={pathname.startsWith('/projects/') ? '/projects' : '/'}
-            className="duration-200 text-zinc-300 hover:text-zinc-100"
+            className="text-zinc-300 duration-200 hover:text-zinc-100"
           >
-            <ArrowLeft className="w-6 h-6" />
+            <ArrowLeft className="h-6 w-6" />
           </Link>
           {!pathname.startsWith('/projects/') && (
             <nav>
@@ -29,7 +29,7 @@ const PageHeader: React.FC = () => {
                 <li>
                   <Link
                     href={'/about'}
-                    className="duration-200 text-zinc-400 hover:text-zinc-100"
+                    className="text-zinc-400 duration-200 hover:text-zinc-100"
                   >
                     About
                   </Link>
@@ -37,7 +37,7 @@ const PageHeader: React.FC = () => {
                 <li>
                   <Link
                     href={'/projects'}
-                    className="duration-200 text-zinc-400 hover:text-zinc-100"
+                    className="text-zinc-400 duration-200 hover:text-zinc-100"
                   >
                     Projects
                   </Link>
@@ -45,7 +45,7 @@ const PageHeader: React.FC = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="duration-200 text-zinc-400 hover:text-zinc-100"
+                    className="text-zinc-400 duration-200 hover:text-zinc-100"
                   >
                     Contact
                   </Link>

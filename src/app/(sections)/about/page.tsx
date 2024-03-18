@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>
       <SectionHeader title="About me" />
-      <div className="flex flex-col-reverse items-center md:flex md:flex-row md:items-start gap-8 border border-zinc-600 p-8 rounded-2xl">
-        <div className="space-y-3 text-zinc-400 text-lg">
+      <div className="flex flex-col-reverse items-center gap-8 rounded-2xl border border-zinc-600 p-8 md:flex md:flex-row md:items-start">
+        <div className="space-y-3 text-lg text-zinc-400">
           <p>
             I have a strong background in web development, with extensive
             experience in both front-end and back-end technologies. I have a
@@ -32,7 +32,7 @@ export default function Page() {
           </p>
         </div>
         {/* Container to enforce square shape */}
-        <div className="relative aspect-square w-1/2 h-80">
+        <div className="sm:min-w-auto relative aspect-square w-1/2 min-w-60 sm:h-1/2">
           <Image
             src={profilePicture}
             alt="me"
@@ -45,10 +45,10 @@ export default function Page() {
       </div>
       <a
         href="/Maximo_Besteiro_CV_en.pdf"
-        className="flex gap-3 w-fit text-zinc-400 hover:text-zinc-100 duration-200"
+        className="flex w-fit gap-3 text-zinc-400 duration-200 hover:text-zinc-100"
         download="Maximo_Besteiro_CV_en.pdf"
       >
-        <Download className="w-6 h-6" />
+        <Download className="h-6 w-6" />
         <span>See my resume</span>
       </a>
     </>

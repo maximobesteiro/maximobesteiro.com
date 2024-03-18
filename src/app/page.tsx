@@ -53,8 +53,8 @@ export default function Home() {
   };
 
   return (
-    <main className="px-10 flex flex-col w-screen h-screen items-center text-center justify-center">
-      <nav className="flex gap-12 animate-fade-in text-base text-zinc-500 md:gap-20 xl:gap-24">
+    <main className="flex h-screen w-screen flex-col items-center justify-center px-10 text-center">
+      <nav className="flex animate-fade-in gap-12 text-base text-zinc-500 md:gap-20 xl:gap-24">
         <Link className="duration-200 hover:text-zinc-300" href={'/about'}>
           About
         </Link>
@@ -67,12 +67,12 @@ export default function Home() {
       </nav>
       <h1
         id="brand"
-        className="my-14 font-bold font-display text-4xl sm:text-5xl md:text-7xl xl:text-8xl xl:my-24"
+        className="my-14 font-display text-4xl font-bold sm:text-5xl md:text-7xl xl:my-24 xl:text-8xl"
         onMouseEnter={pulseBrand}
       >
         Máximo Besteiro
       </h1>
-      <p className="text-base text-zinc-500 animate-fade-in">
+      <p className="animate-fade-in text-base text-zinc-500">
         Team-driven engineer, always sharpening my skills for stronger results.
       </p>
     </main>

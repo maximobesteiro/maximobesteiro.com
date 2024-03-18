@@ -28,17 +28,17 @@ export default function ProjectPage({ params }: ProjectProps) {
           <p className="mt-6 text-lg text-zinc-400">{project.description}</p>
         )}
         {project.links && (
-          <div className="flex gap-8 mt-14 justify-center">
+          <div className="mt-14 flex justify-center gap-8">
             {project.links.map((link) => (
               <Link
                 key={link.type}
                 href={link.url}
-                className="flex gap-3 w-fit border border-zinc-600 p-3 rounded-xl text-zinc-400 hover:border-zinc-100 hover:text-zinc-100 duration-200"
+                className="flex w-fit gap-3 rounded-xl border border-zinc-600 p-3 text-zinc-400 duration-200 hover:border-zinc-100 hover:text-zinc-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="text-lg">{link.type}</span>
-                <ExternalLink className="w-6 h-6" />
+                <ExternalLink className="h-6 w-6" />
               </Link>
             ))}
           </div>
@@ -49,7 +49,7 @@ export default function ProjectPage({ params }: ProjectProps) {
         <>
           <div>
             <h3 className="text-2xl font-bold">Skills Involved</h3>
-            <div className="mt-6 text-zinc-400 text-lg">
+            <div className="mt-6 text-lg text-zinc-400">
               {project.skills?.join(' • ')}
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function ProjectPage({ params }: ProjectProps) {
         </>
       )}
       <div
-        className="prose prose-invert prose-zinc prose-hr:border-zinc-800 text-zinc-400 max-w-none"
+        className="prose prose-zinc prose-invert max-w-none text-zinc-400 prose-hr:border-zinc-800"
         dangerouslySetInnerHTML={{ __html: project.content }}
       ></div>
     </article>

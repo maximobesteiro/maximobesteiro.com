@@ -21,15 +21,15 @@ const ContactCard: React.FC<ContactCardProps> = ({
       href={link}
       target={openInNewTab ? '_blank' : '_self'}
       rel="noopener noreferrer"
-      className="w-full flex flex-col items-center gap-4 md:flex-row md:justify-between border border-zinc-600 hover:border-zinc-100 rounded-2xl p-8 group duration-200"
+      className="group flex w-full flex-col items-center gap-4 rounded-2xl border border-zinc-600 p-8 duration-200 hover:border-zinc-100 md:flex-row md:justify-between"
     >
-      <div className="flex gap-5 items-center text-sm text-zinc-400 group-hover:text-zinc-100">
-        <div className="w-12 h-12 rounded-full flex items-center justify-center border border-zinc-400 group-hover:border-zinc-100 duration-200">
+      <div className="flex items-center gap-5 text-sm text-zinc-400 group-hover:text-zinc-100">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-400 duration-200 group-hover:border-zinc-100">
           {icon}
         </div>
         <div className="text-3xl duration-200">{title}</div>
       </div>
-      <div className="text-3xl font-bold text-zinc-600 group-hover:text-zinc-100 duration-200">
+      <div className="text-3xl font-bold text-zinc-600 duration-200 group-hover:text-zinc-100">
         {value}
       </div>
     </Link>
