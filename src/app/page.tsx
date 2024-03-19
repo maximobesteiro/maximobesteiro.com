@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import useDeviceSize from '@/hooks/useDeviceSize';
+import Particles from '@/components/particles';
 
 export default function Home() {
   const deviceSize = useDeviceSize();
@@ -65,6 +66,10 @@ export default function Home() {
           Contact
         </Link>
       </nav>
+      <Particles
+        className="absolute inset-0 -z-10 animate-fade-in"
+        quantity={100}
+      />
       <h1
         id="brand"
         className="my-14 font-display text-4xl font-bold sm:text-5xl md:text-7xl xl:my-24 xl:text-8xl"
