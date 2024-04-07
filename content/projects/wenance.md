@@ -24,4 +24,8 @@ meta:
   description: Maximo Besteiro's experience at Wenance
 ---
 
-Irure tempor irure adipisicing do aliquip elit consequat. Commodo non ea cillum velit laborum paria
+When I joined Wenance, they were in their early stages trying to transition from an offline lending business to an actual fintech company. During this period, I helped them build a team of developers to build a digital onboarding platform. I was responsible for the design and development of a microservices architecture that would allow the company to scale and grow.
+
+Once the company hierarchy and the IT department were aligned on the need to scale the engineering team, we were ready to step on the gas and completely redesign the onboarding flow, fully automate the digital signature process for legal documents, integrate with Salesforce, improve cash-in and cash-out flows, etc.
+
+We managed to speed up the full lending cycle from 1 week to only 6 minutes.

@@ -23,4 +23,9 @@ meta:
   description: Maximo Besteiro's experience at Despegar.com
 ---
 
-Irure tempor irure adipisicing do aliquip elit consequat. Commodo non ea cillum velit laborum paria
+At Despegar, I had the opportunity to lead different teams towards:
+
+- the implementation of the web mobile version of the site, focusing on performance and usage of a dedicated mobile API
+- maintaining several internal tools to assist mobile development (mainly a configuration service and the push notifications service)
+- building a custom front end (Angular + Material UI) for managing push notifications
+- migrating the data model for mobile customers (from PostgreSQL to MongoDB)

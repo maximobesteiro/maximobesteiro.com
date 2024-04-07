@@ -19,4 +19,5 @@ meta:
   description: Maximo Besteiro's experience at Tiendanube
 ---
 
-Irure tempor irure adipisicing do aliquip elit consequat. Commodo non ea cillum velit laborum paria
+As a Engineering Manager I focused in putting the team into a growth mindset and improving deliverability.
+The team was in charge of the payment’s domain. We worked following ShapeUp methodology (by BaseCamp) in an attempt to define focused projects and increase collaboration and engagement within the team.
