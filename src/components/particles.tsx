@@ -21,6 +21,7 @@ export default function Particles({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const circles = useRef<any[]>([]);
   const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -73,11 +74,14 @@ export default function Particles({
     translateX: number;
     translateY: number;
     size: number;
-    alpha: number;
     targetAlpha: number;
     dx: number;
     dy: number;
     magnetism: number;
+    fillColorR: number;
+    fillColorG: number;
+    fillColorB: number;
+    alpha: number;
   };
 
   const resizeCanvas = () => {
@@ -104,6 +108,10 @@ export default function Particles({
     const dx = (Math.random() - 0.5) * 0.2;
     const dy = (Math.random() - 0.5) * 0.2;
     const magnetism = 0.1 + Math.random() * 4;
+    const fillColorR = Math.floor(Math.random() * 120) + 120; // 120-240
+    const fillColorG = Math.floor(Math.random() * 120) + 120; // 120-240
+    const fillColorB = Math.floor(Math.random() * 120) + 120; // 120-240
+
     return {
       x,
       y,
@@ -115,16 +123,29 @@ export default function Particles({
       dx,
       dy,
       magnetism,
+      fillColorR,
+      fillColorG,
+      fillColorB,
     };
   };
 
   const drawCircle = (circle: Circle, update = false) => {
     if (context.current) {
-      const { x, y, translateX, translateY, size, alpha } = circle;
+      const {
+        x,
+        y,
+        translateX,
+        translateY,
+        size,
+        fillColorR,
+        fillColorG,
+        fillColorB,
+        alpha,
+      } = circle;
       context.current.translate(translateX, translateY);
       context.current.beginPath();
       context.current.arc(x, y, size, 0, 2 * Math.PI);
-      context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+      context.current.fillStyle = `rgba(${fillColorR}, ${fillColorG}, ${fillColorB}, ${alpha})`;
       context.current.fill();
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
