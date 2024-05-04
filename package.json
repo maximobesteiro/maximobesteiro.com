@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev:content": "velite --watch",
-    "build:content": "velite --clean",
     "dev:next": "next dev",
-    "build:next": "next build",
     "dev": "run-p dev:*",
+    "build:content": "velite --clean",
+    "build:next": "next build",
     "build": "run-s build:*",
     "start": "next start",
     "lint": "next lint"

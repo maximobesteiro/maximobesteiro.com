@@ -27,7 +27,7 @@ const ProjectCard: React.FC<{ project: Projects }> = ({
             </>
           )}
         </div>
-        <h2 className="text-xl font-bold text-zinc-400 duration-200 group-hover:text-white lg:text-3xl">
+        <h2 className="text-2xl font-bold text-zinc-400 duration-200 group-hover:text-white lg:text-3xl">
           {title}
         </h2>
         <p className="text-sm text-zinc-400 duration-200 group-hover:text-zinc-200">

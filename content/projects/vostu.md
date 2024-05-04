@@ -17,4 +17,6 @@ meta:
   description: Maximo Besteiro's experience at Vostu
 ---
 
-Irure tempor irure adipisicing do aliquip elit consequat. Commodo non ea cillum velit laborum paria
+I joined the company initially as an IC, in charge of the UI team in the game "Minifazenda". Responsible for the maintenance and improvement of the user interface as well as the integration with social networks (Facebook and Orkut API). Estimation, planning and coordination of general development tasks in the game. Design integration strategies between the client application (developed in Flash), the back-end and the user interface (developed in Javascript, HTML and CSS).
+
+Later on I was given the opportunity to lead a team of 6, in charge of the development and maintenance of Vostu's internal platform (Vostu Gaming Network), the payments service, and the development of the company's Web portal.

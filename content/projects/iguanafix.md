@@ -20,4 +20,4 @@ meta:
   description: Maximo Besteiro's experience at IguanaFix
 ---
 
-Irure tempor irure adipisicing do aliquip elit consequat. Commodo non ea cillum velit laborum paria
+In charge of developing the web, web mobile, and native mobile applications of IguanaFix, covering a wide range of tasks: arquitecture design, data base modeling, infrastructure (production servers tuning), development both on the back-end and front-end, development of the web mobile version (using jQuery mobile framework) and development of IguanaFix's Android application.
