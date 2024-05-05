@@ -108,9 +108,9 @@ export default function Particles({
     const dx = (Math.random() - 0.5) * 0.2;
     const dy = (Math.random() - 0.5) * 0.2;
     const magnetism = 0.1 + Math.random() * 4;
-    const fillColorR = Math.floor(Math.random() * 120) + 120; // 120-240
-    const fillColorG = Math.floor(Math.random() * 120) + 120; // 120-240
-    const fillColorB = Math.floor(Math.random() * 120) + 120; // 120-240
+    const fillColorR = 212; // Math.floor(Math.random() * 120) + 120; // 120-240
+    const fillColorG = 212; // Math.floor(Math.random() * 120) + 120; // 120-240
+    const fillColorB = 216; // Math.floor(Math.random() * 120) + 120; // 120-240
 
     return {
       x,
