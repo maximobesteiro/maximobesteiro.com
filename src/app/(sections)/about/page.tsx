@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <>
       <SectionHeader title="About me" />
-      <div className="flex flex-col-reverse items-center gap-8 rounded-2xl border border-zinc-600 p-8 md:flex md:flex-row md:items-start">
-        <div className="space-y-3 text-lg text-zinc-400">
+      <div className="flex flex-col-reverse items-center gap-8 rounded-2xl border border-stone-600 p-8 md:flex md:flex-row md:items-start">
+        <div className="space-y-3 text-lg text-stone-400">
           <p>
             I have a strong background in web development, with extensive
             experience in both front-end and back-end technologies. I have a
@@ -45,7 +45,7 @@ export default function Page() {
       </div>
       <a
         href="/Maximo_Besteiro_CV_en.pdf"
-        className="flex w-fit gap-3 text-zinc-400 duration-200 hover:text-zinc-100"
+        className="flex w-fit gap-3 text-stone-400 duration-200 hover:text-stone-100"
         download="Maximo_Besteiro_CV_en.pdf"
       >
         <Download className="h-6 w-6" />

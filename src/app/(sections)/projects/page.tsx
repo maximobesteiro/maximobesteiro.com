@@ -22,7 +22,7 @@ export default function Page() {
         title="Projects"
         subtitle="Most of the projects are from work and some are on my own time."
       />
-      <hr className="border-zinc-800" />
+      <hr className="border-stone-800" />
       <div className="flex flex-col gap-8">
         {sorted.map((project) => (
           <ProjectCard key={project.slug} project={project} />

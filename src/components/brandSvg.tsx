@@ -79,7 +79,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
         viewBox="0 0 192 27"
         preserveAspectRatio="xMinYMin meet"
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden h-max  w-max stroke-zinc-300 pb-8 md:block lg:w-2/3"
+        className="hidden h-max  w-max stroke-stone-300 pb-8 md:block lg:w-2/3"
       >
         <defs>
           <radialGradient
@@ -94,7 +94,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
           </radialGradient>
         </defs>
         <text
-          className="fill-zinc-100 stroke-[0.3] font-sans text-2xl font-black"
+          className="fill-stone-100 stroke-[0.3] font-sans text-2xl font-black"
           style={{ fillOpacity: 0.03 }}
           x="0"
           y="95%"
@@ -108,7 +108,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
         viewBox="0 0 72 35"
         preserveAspectRatio="xMinYMin meet"
         xmlns="http://www.w3.org/2000/svg"
-        className="block h-max w-2/3 stroke-zinc-300 py-4 md:hidden lg:w-2/3"
+        className="block h-max w-2/3 stroke-stone-300 py-4 md:hidden lg:w-2/3"
       >
         <defs>
           <radialGradient
@@ -123,7 +123,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
           </radialGradient>
         </defs>
         <text
-          className="block fill-zinc-100 stroke-[0.3] font-sans text-lg font-black md:hidden"
+          className="block fill-stone-100 stroke-[0.3] font-sans text-lg font-black md:hidden"
           style={{ fillOpacity: 0.03 }}
           stroke="url(#brandGradient2)"
         >

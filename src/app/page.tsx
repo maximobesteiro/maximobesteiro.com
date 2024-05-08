@@ -31,10 +31,10 @@ export default function Home() {
         <Link className="duration-200 hover:text-stone-300" href={'/about'}>
           About
         </Link>
-        <Link className="duration-200 hover:text-zinc-300" href={'/projects'}>
+        <Link className="duration-200 hover:text-stone-300" href={'/projects'}>
           Projects
         </Link>
-        <Link className="duration-200 hover:text-zinc-300" href={'/contact'}>
+        <Link className="duration-200 hover:text-stone-300" href={'/contact'}>
           Contact
         </Link>
       </nav>
@@ -43,7 +43,7 @@ export default function Home() {
         quantity={100}
       />
       <BrandSvg cursor={cursor} wrapperRef={wrapperRef} />
-      <p className="animate-fade-in text-base text-zinc-500">
+      <p className="animate-fade-in text-base text-stone-500">
         Team-driven engineer, always sharpening my skills for stronger results.
       </p>
     </main>

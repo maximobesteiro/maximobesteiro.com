@@ -23,9 +23,9 @@ export default function ProjectPage({ params }: ProjectProps) {
   return (
     <article className="space-y-10 md:space-y-14">
       <header className="text-center">
-        <h2 className="text-4xl font-bold text-zinc-100">{project.title}</h2>
+        <h2 className="text-4xl font-bold text-stone-100">{project.title}</h2>
         {project.description && (
-          <p className="mt-6 text-lg text-zinc-400">{project.description}</p>
+          <p className="mt-6 text-lg text-stone-400">{project.description}</p>
         )}
         {project.links && (
           <div className="mt-14 flex justify-center gap-8">
@@ -33,7 +33,7 @@ export default function ProjectPage({ params }: ProjectProps) {
               <Link
                 key={link.type}
                 href={link.url}
-                className="flex w-fit gap-3 rounded-xl border border-zinc-600 p-3 text-zinc-400 duration-200 hover:border-zinc-100 hover:text-zinc-100"
+                className="flex w-fit gap-3 rounded-xl border border-stone-600 p-3 text-stone-400 duration-200 hover:border-stone-100 hover:text-stone-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -44,20 +44,20 @@ export default function ProjectPage({ params }: ProjectProps) {
           </div>
         )}
       </header>
-      <hr className="my-4 border-zinc-600" />
+      <hr className="my-4 border-stone-600" />
       {project.skills && (
         <>
           <div>
             <h3 className="text-2xl font-bold">Skills Involved</h3>
-            <div className="mt-6 text-lg text-zinc-400">
+            <div className="mt-6 text-lg text-stone-400">
               {project.skills?.join(' • ')}
             </div>
           </div>
-          <hr className="my-4 border-zinc-600" />
+          <hr className="my-4 border-stone-600" />
         </>
       )}
       <div
-        className="prose prose-zinc prose-invert max-w-none text-zinc-400 prose-hr:border-zinc-800"
+        className="prose prose-zinc prose-invert max-w-none text-stone-400 prose-hr:border-stone-800"
         dangerouslySetInnerHTML={{ __html: project.content }}
       ></div>
     </article>
