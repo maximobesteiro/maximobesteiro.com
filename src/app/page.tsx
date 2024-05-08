@@ -9,7 +9,8 @@ export default function Home() {
   const wrapperRef = useRef<HTMLElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleMouseMove = (event: any) => {
     if (!wrapperRef.current) {
       return;
     }
