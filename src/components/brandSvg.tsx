@@ -1,20 +1,68 @@
-import useDeviceSize from '@/hooks/useDeviceSize';
-import { useEffect, useState, type RefObject } from 'react';
+import { useEffect, useRef, useState, type RefObject } from 'react';
+import { detectTouchscreen } from '@/utils/clientUtils';
 
-interface MainTitleProps {
+interface BrandSvgProps {
   cursor: {
     x: number;
     y: number;
   };
   wrapperRef: RefObject<HTMLElement>;
+  isTouchScreen?: boolean;
 }
 
-const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
-  const deviceSize = useDeviceSize();
+const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
   const [gradientCenter, setGradientCenter] = useState({
-    cx: '50%',
-    cy: '50%',
+    cx: '0%',
+    cy: '0%',
   });
+
+  const animationRef = useRef<number | null>(null);
+  const direction = useRef<number>(1);
+  const position = useRef<number>(5);
+  const isAnimating = useRef<boolean>(true);
+
+  useEffect(() => {
+    if (detectTouchscreen()) {
+      const animate = () => {
+        if (isAnimating.current) {
+          position.current += 1 * direction.current;
+
+          if (position.current >= 95 || position.current <= 5) {
+            direction.current *= -1; // Reverse direction
+          }
+
+          // If back at the starting point, pause the animation
+          if (position.current === 5) {
+            isAnimating.current = false;
+            setTimeout(() => {
+              isAnimating.current = true;
+              animate();
+            }, 5000); // Pause for 5 seconds before restarting the animation
+            return;
+          }
+
+          // Update the gradient center
+          setGradientCenter({
+            cx: `${position.current}%`,
+            cy: `${50 + 20 * Math.sin(position.current / 20)}%`, // Sine wave for vertical movement
+          });
+
+          // Continue the animation
+          animationRef.current = requestAnimationFrame(animate);
+        }
+      };
+
+      // Start the animation
+      animate();
+
+      // Cleanup function to cancel the animation when the component unmounts
+      return () => {
+        if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current);
+        }
+      };
+    }
+  }, []);
 
   useEffect(() => {
     if (wrapperRef.current && cursor.x !== null && cursor.y !== null) {
@@ -24,12 +72,6 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
       setGradientCenter({ cx: `${cx}%`, cy: `${cy}%` });
     }
   }, [cursor, wrapperRef]);
-
-  useEffect(() => {
-    if (deviceSize !== 'desktop') {
-      console.log('Animating gradient...');
-    }
-  }, [deviceSize]);
 
   return (
     <>
@@ -41,7 +83,7 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
       >
         <defs>
           <radialGradient
-            id="emeraldGradientr"
+            id="brandGradient1"
             gradientUnits="userSpaceOnUse"
             r="12%"
             cx={gradientCenter.cx}
@@ -56,7 +98,7 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
           style={{ fillOpacity: 0.03 }}
           x="0"
           y="95%"
-          stroke="url(#emeraldGradientr)"
+          stroke="url(#brandGradient1)"
         >
           Máximo Besteiro
         </text>
@@ -70,7 +112,7 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
       >
         <defs>
           <radialGradient
-            id="emeraldGradientr2"
+            id="brandGradient2"
             gradientUnits="userSpaceOnUse"
             r="25%"
             cx={gradientCenter.cx}
@@ -83,7 +125,7 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
         <text
           className="block fill-zinc-100 stroke-[0.3] font-sans text-lg font-black md:hidden"
           style={{ fillOpacity: 0.03 }}
-          stroke="url(#emeraldGradientr2)"
+          stroke="url(#brandGradient2)"
         >
           <tspan x="2" y="15">
             Máximo
@@ -97,4 +139,4 @@ const MainTitle = ({ cursor, wrapperRef }: MainTitleProps) => {
   );
 };
 
-export default MainTitle;
+export default BrandSvg;

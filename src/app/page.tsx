@@ -1,13 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
-import useDeviceSize from '@/hooks/useDeviceSize';
 import Particles from '@/components/particles';
-import MainTitle from '@/components/mainTitle';
+import BrandSvg from '@/components/brandSvg';
 
 export default function Home() {
-  const deviceSize = useDeviceSize();
   const wrapperRef = useRef<HTMLElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
@@ -21,51 +19,6 @@ export default function Home() {
     const y = event.clientY - rect.top;
 
     setCursor({ x, y });
-  };
-
-  useEffect(() => {
-    if (deviceSize === 'desktop') {
-      return;
-    }
-
-    const interval = setInterval(() => {
-      pulseBrand();
-    }, 3500);
-    return () => clearInterval(interval);
-  }, [deviceSize]);
-
-  const pulseBrand = () => {
-    const brand = document.getElementById('brand');
-
-    if (!brand) {
-      return;
-    }
-
-    const classList = brand.classList;
-    const defaultStyles = [
-      'font-display',
-      'font-bold',
-      'text-4xl',
-      'sm:text-5xl',
-      'md:text-7xl',
-      'xl:text-8xl',
-    ];
-    const glitchStyles = [
-      'font-display-glitch',
-      'font-normal',
-      'text-[31px]/[40px]',
-      'sm:text-[41px]/[48px]',
-      'md:text-[62px]/[72px]',
-      'xl:text-[83px]/[96px]',
-    ];
-
-    classList.remove(...defaultStyles);
-    classList.add(...glitchStyles);
-
-    setTimeout(() => {
-      classList.remove(...glitchStyles);
-      classList.add(...defaultStyles);
-    }, 150);
   };
 
   return (
@@ -89,27 +42,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      {/* <h1
-        id="brand"
-        className="my-14 font-display text-4xl font-bold sm:text-5xl md:text-7xl xl:my-24 xl:text-8xl"
-        onMouseEnter={pulseBrand}
-      >
-        Máximo Besteiro
-      </h1> */}
-      <MainTitle cursor={cursor} wrapperRef={wrapperRef} />
-      {/* <svg
-        viewBox="0 0 100 50"
-        className="animate-fade-in border-4 border-solid border-pink-500"
-      >
-        <text
-          x="50%"
-          y="50%"
-          textAnchor="middle"
-          className="fill-zinc-100 text-5xl font-bold"
-        >
-          Some Text
-        </text>
-      </svg> */}
+      <BrandSvg cursor={cursor} wrapperRef={wrapperRef} />
       <p className="animate-fade-in text-base text-zinc-500">
         Team-driven engineer, always sharpening my skills for stronger results.
       </p>
