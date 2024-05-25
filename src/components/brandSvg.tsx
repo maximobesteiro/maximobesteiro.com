@@ -37,14 +37,14 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
             setTimeout(() => {
               isAnimating.current = true;
               animate();
-            }, 5000); // Pause for 5 seconds before restarting the animation
+            }, 10000); // Pause for 10 seconds before restarting the animation
             return;
           }
 
           // Update the gradient center
           setGradientCenter({
             cx: `${position.current}%`,
-            cy: `${50 + 20 * Math.sin(position.current / 20)}%`, // Sine wave for vertical movement
+            cy: `${38 + 20 * Math.sin(position.current / 20)}%`, // Sine wave for vertical movement
           });
 
           // Continue the animation
@@ -76,7 +76,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
   return (
     <>
       <svg
-        viewBox="0 0 192 27"
+        viewBox="0 0 225 27"
         preserveAspectRatio="xMinYMin meet"
         xmlns="http://www.w3.org/2000/svg"
         className="hidden h-max  w-max stroke-stone-300 pb-8 md:block lg:w-2/3"
@@ -94,7 +94,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
           </radialGradient>
         </defs>
         <text
-          className="fill-stone-100 stroke-[0.3] font-sans text-2xl font-black"
+          className="fill-stone-100 stroke-[0.3] font-display text-2xl font-black"
           style={{ fillOpacity: 0.03 }}
           x="0"
           y="95%"
@@ -105,7 +105,7 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
       </svg>
 
       <svg
-        viewBox="0 0 72 35"
+        viewBox="0 0 88 75"
         preserveAspectRatio="xMinYMin meet"
         xmlns="http://www.w3.org/2000/svg"
         className="block h-max w-2/3 stroke-stone-300 py-4 md:hidden lg:w-2/3"
@@ -123,14 +123,13 @@ const BrandSvg = ({ cursor, wrapperRef }: BrandSvgProps) => {
           </radialGradient>
         </defs>
         <text
-          className="block fill-stone-100 stroke-[0.3] font-sans text-lg font-black md:hidden"
-          style={{ fillOpacity: 0.03 }}
+          className="block fill-transparent stroke-[0.5] font-display text-lg font-black md:hidden"
           stroke="url(#brandGradient2)"
         >
-          <tspan x="2" y="15">
+          <tspan x="6" y="34">
             Máximo
           </tspan>
-          <tspan x="0" y="32">
+          <tspan x="0" y="55">
             Besteiro
           </tspan>
         </text>

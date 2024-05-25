@@ -11,8 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-outfit)', ...defaultTheme.fontFamily.sans],
-        display: ['var(--font-rubik)'],
-        'display-glitch': ['var(--font-rubik-glitch)'],
+        display: ['var(--font-orbitron)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
