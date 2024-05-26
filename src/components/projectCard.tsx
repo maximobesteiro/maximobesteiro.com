@@ -6,7 +6,7 @@ const ProjectCard: React.FC<{ project: Projects }> = ({
 }) => {
   return (
     <Link href={`/projects/${slug}`}>
-      <article className="group flex w-full flex-col gap-4 rounded-2xl border border-stone-600 p-8 duration-200 hover:border-stone-100">
+      <article className="group flex w-full flex-col gap-4 rounded-2xl border border-stone-600 p-8 duration-200 hover:border-yellow-500">
         <div className="flex gap-2 text-sm font-semibold text-stone-400 duration-200 group-hover:text-stone-200">
           <time dateTime={dateFrom}>
             {Intl.DateTimeFormat('en-US', {

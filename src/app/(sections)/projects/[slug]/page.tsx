@@ -33,7 +33,7 @@ export default function ProjectPage({ params }: ProjectProps) {
               <Link
                 key={link.type}
                 href={link.url}
-                className="flex w-fit gap-3 rounded-xl border border-stone-600 p-3 text-stone-400 duration-200 hover:border-stone-100 hover:text-stone-100"
+                className="flex w-fit gap-3 rounded-xl border border-stone-600 p-3 text-stone-400 duration-200 hover:border-yellow-500 hover:text-stone-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
