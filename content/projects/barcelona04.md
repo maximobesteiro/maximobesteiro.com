@@ -1,6 +1,7 @@
 ---
 title: Barcelona/04
-description: Software engineer at Vostu. Vostu was a game development company that rose to prominence by creating popular video games for social networking platforms, primarily Facebook and Orkut.
+description: Software engineer at Barcelona/04. Barcelona/04 Computing Group is one of the leading companies in the development of Technology, Security and Business Services (BSM) monitoring software.
+description: 
 published: true
 dateFrom: 2007-08-01
 dateTo: 2011-06-01
